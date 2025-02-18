@@ -223,7 +223,7 @@ function App() {
                   </div>
 
                   <a
-                    href="https://app.mailingboss.com/lists/67b35e76967a6/subscribe"
+                    href="https://app.mailingboss.com/lists/67b36029c2879/subscribe"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#0276B1] rounded-full overflow-hidden hover-scale"
