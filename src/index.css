@@ -4,19 +4,46 @@
 
 @layer components {
   .glass-effect {
-    @apply backdrop-blur-md bg-white/5 border border-white/10;
+    @apply backdrop-blur-md bg-white/5 border border-white/20;
   }
-  
+
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-105;
   }
-  
+
   .gradient-text {
     @apply bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent;
   }
-  
+
   .feature-card {
-    @apply p-6 rounded-2xl glass-effect hover-scale space-y-3;
+    @apply p-6 rounded-2xl glass-effect hover-scale space-y-3 
+           bg-gradient-to-br from-[#1D2951]/50 to-[#CF142B]/20 
+           border border-white/20;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-2 text-white hover:text-[#CF142B] 
+           transition-colors duration-300 text-sm font-medium;
+  }
+
+  .cta-button {
+    @apply relative px-8 py-4 bg-gradient-to-r from-[#CF142B] to-[#1D2951]
+           rounded-full overflow-hidden transition-all duration-500 
+           hover:scale-105 hover:shadow-xl hover:shadow-[#CF142B]/25
+           active:scale-95 font-semibold text-white text-lg;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/10 rounded-2xl border border-white/20
+           hover:bg-[#1D2951]/30 transition-all duration-300
+           hover:border-[#CF142B]/50 hover:scale-105;
+  }
+
+  .animate-gradient {
+    @apply animate-pulse;
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+    background-image: linear-gradient(45deg, #1d2951, #cf142b, white, #1d2951);
   }
 }
 
@@ -32,5 +59,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
